@@ -1,4 +1,4 @@
- package com.suaces.modelo;
+ package com.sauces.modelo;
 
 
 import java.io.Serializable;
