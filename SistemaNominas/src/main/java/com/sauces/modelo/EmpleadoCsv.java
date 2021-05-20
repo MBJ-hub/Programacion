@@ -5,8 +5,8 @@
  */
 package com.sauces.modelo;
 
-import com.suaces.sistemanominas.dao.DaoException;
-import com.suaces.sistemanominas.dao.EmpleadoDao;
+import com.sauces.sistemanominas.dao.DaoException;
+import com.sauces.sistemanominas.dao.EmpleadoDao;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
