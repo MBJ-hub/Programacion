@@ -137,19 +137,20 @@ public class Controlador {
         dni = vista.getDni();
         emp = modelo.getEmpleado(dni);
         if (emp != null) {
-
+            //*Pedimos los datos y los cambiamos.
             emp.setDni(new Dni(vista.getDni()));
             emp.setNombre(vista.getNombre());
             if (emp instanceof EmpleadoFijo) {
+                //*Casting.
                 ((EmpleadoFijo) emp).setSalario(vista.getSalario());
-
             } else {
                 ((EmpleadoEventual) emp).setHoras(vista.getHoras());
             }
+            //*Dar a listar empleados en la interfaz para que funcione!.
+            vista.mostrarMensaje("Empleado modificado");
 
         } else {
-            vista.mostrarMensaje("No existe con Dni");
-
+            vista.mostrarMensaje("No existe empleado con ese Dni");
         }
     }
     
