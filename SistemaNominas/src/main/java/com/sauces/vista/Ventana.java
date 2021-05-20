@@ -411,6 +411,7 @@ public class Ventana extends javax.swing.JFrame {
 
     public float getSalario() {
         return Float.parseFloat(this.tsalario.getText());
+        //*return (Number) this.tSalario.getValue()
     }
 
     public float getIngresos() {
