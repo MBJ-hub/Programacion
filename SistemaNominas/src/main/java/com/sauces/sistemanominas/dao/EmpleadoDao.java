@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.suaces.sistemanominas.dao;
+package com.sauces.sistemanominas.dao;
 
-import com.suaces.modelo.Empleado;
+import com.sauces.modelo.Empleado;
 import java.util.List;
 
 /**
