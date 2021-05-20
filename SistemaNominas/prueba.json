@@ -1,0 +1,18 @@
+[
+  {
+    "type": "EmpleadoFijo",
+    "salario": 1222.0,
+    "dni": {
+      "dni": "12345678Z"
+    },
+    "nombre": "outmane"
+  },
+  {
+    "type": "EmpleadoFijo",
+    "salario": 1.0,
+    "dni": {
+      "dni": "12345678Z"
+    },
+    "nombre": "a"
+  }
+]
