@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.suaces.controlador;
+package com.sauces.controlador;
 
 import com.suaces.modelo.Dni;
 import com.suaces.modelo.Empleado;
