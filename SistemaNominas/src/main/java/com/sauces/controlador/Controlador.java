@@ -109,7 +109,7 @@ public class Controlador {
             vista.mostrarIngresos(emp.ingresos());
 
         } else {
-            vista.mostrarMensaje("No existe con Dni");
+            vista.mostrarMensaje("No existe empleado con ese Dni");
 
         }
     }
@@ -146,7 +146,8 @@ public class Controlador {
             } else {
                 ((EmpleadoEventual) emp).setHoras(vista.getHoras());
             }
-            //*Dar a listar empleados en la interfaz para que funcione!.
+            //*¡Dar a listar empleados en la interfaz para que funcione!.
+            vista.mostrarIngresos(emp.ingresos());
             vista.mostrarMensaje("Empleado modificado");
 
         } else {
@@ -158,7 +159,7 @@ public class Controlador {
         vista.listarEmpleados(modelo.listarEmpleados());
 
     }
-
+    
     public void listarEmpleados2() {
         vista.listarEmpleados(modelo.listarEmpleados());
         List<Empleado> listado = null;
@@ -217,9 +218,9 @@ public class Controlador {
         if (empleadoDao != null) {
             try {
                 modelo.setEmpleadoDao(empleadoDao);
-               n=  modelo.cargarEmpleados();
+                n=  modelo.cargarEmpleados();
                
-                 vista.mostrarMensaje("se ha cargado "+n+" Empleados");
+                vista.mostrarMensaje("se ha cargado "+n+" Empleados");
                 vista.listarEmpleados(modelo.listarEmpleados());
             } catch (DaoException ex) {
                 vista.mostrarMensaje(ex.getMessage());
