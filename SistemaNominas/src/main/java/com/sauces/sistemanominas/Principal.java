@@ -1,4 +1,4 @@
-package com.suaces.sistemanominas;
+package com.sauces.sistemanominas;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -6,9 +6,9 @@ package com.suaces.sistemanominas;
  * and open the template in the editor.
  */
 
-import com.suaces.modelo.SistemaNominas;
-import com.suaces.controlador.Controlador;
-import com.suaces.vista.Ventana;
+import com.sauces.modelo.SistemaNominas;
+import com.sauces.controlador.Controlador;
+import com.sauces.vista.Ventana;
 
 /**
  *
