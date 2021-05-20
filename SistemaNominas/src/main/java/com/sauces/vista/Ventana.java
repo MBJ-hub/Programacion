@@ -428,6 +428,7 @@ public class Ventana extends javax.swing.JFrame {
     }
 
     public String getOrden() {
+        //*return bgOrden.getSelection().getActionCommand();
         this.rddni.getText();
         this.rdnombre.getText();
         this.rdingresos.getText();
