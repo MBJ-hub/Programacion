@@ -330,7 +330,8 @@ public class Ventana extends javax.swing.JFrame {
 
     private void btnborrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnborrarActionPerformed
         // TODO add your handling code here:
-        if (JOptionPane.showConfirmDialog(this, "¿Esatas seguro?") == JOptionPane.OK_OPTION) {
+        if(this.tDni)
+        if (JOptionPane.showConfirmDialog(this, "¿Estas seguro?") == JOptionPane.OK_OPTION) {
             try {
                 controlador.eliminarEmpleado();
                 limpiarCampos();
@@ -351,7 +352,7 @@ public class Ventana extends javax.swing.JFrame {
 
     private void buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarActionPerformed
         // TODO add your handling code here:
-        String dni = JOptionPane.showInputDialog(this, "Intrdoduzca El empleado a buscar");
+        String dni = JOptionPane.showInputDialog(this, "Introduzca El empleado a buscar");
         if (dni != null) {
             try {
                 limpiarCampos();
