@@ -152,7 +152,7 @@ public class Controlador {
 
         }
     }
-
+    
     public void listarEmpleados() {
         vista.listarEmpleados(modelo.listarEmpleados());
 
