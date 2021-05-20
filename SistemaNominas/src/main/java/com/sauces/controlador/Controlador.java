@@ -81,7 +81,7 @@ public class Controlador {
                 vista.listarEmpleados(modelo.listarEmpleados());
                 vista.mostrarMensaje("Empleado " + tipo + " Incluido");
             } else {
-                vista.mostrarMensaje("No ha podido incluir");
+                vista.mostrarMensaje("No se ha podido incluir");
             }
         } catch (dniExepcion exs) {
             vista.mostrarMensaje("Error :" + exs);
