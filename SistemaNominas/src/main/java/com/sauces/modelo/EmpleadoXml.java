@@ -5,8 +5,8 @@
  */
 package com.sauces.modelo;
 
-import com.suaces.sistemanominas.dao.DaoException;
-import com.suaces.sistemanominas.dao.EmpleadoDao;
+import com.sauces.sistemanominas.dao.DaoException;
+import com.sauces.sistemanominas.dao.EmpleadoDao;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.StreamException;
 import com.thoughtworks.xstream.io.xml.DomDriver;
