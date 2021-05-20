@@ -160,7 +160,7 @@ public class Controlador {
 
     }
     
-    public void listarEmpleados2() {
+    public void listarEmpleados1() {
         vista.listarEmpleados(modelo.listarEmpleados());
         List<Empleado> listado = null;
         String orden = vista.getOrden();
@@ -176,8 +176,9 @@ public class Controlador {
                         return e1.getNombre().compareTo(e2.getNombre());
                     }
                 });
-                break;
+                
         }
+        //*if(listado!=null){}
     }
 
     public void guardarEmpleados() {
