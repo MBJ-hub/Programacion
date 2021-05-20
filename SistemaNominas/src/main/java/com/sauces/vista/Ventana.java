@@ -455,7 +455,7 @@ public class Ventana extends javax.swing.JFrame {
     }
 
     public void mostrarHoras(int horas) {
-        this.thoras.setValue(Integer.toString(horas));
+        this.thoras.setValue(horas);
     }
 
     public void mostrarIngresos(float ingresos) {
