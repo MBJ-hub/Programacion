@@ -330,15 +330,16 @@ public class Ventana extends javax.swing.JFrame {
 
     private void btnborrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnborrarActionPerformed
         // TODO add your handling code here:
-        if(this.tDni)
-        if (JOptionPane.showConfirmDialog(this, "¿Estas seguro?") == JOptionPane.OK_OPTION) {
-            try {
-                controlador.eliminarEmpleado();
-                limpiarCampos();
-            } catch (dniExepcion ex) {
-                Logger.getLogger(Ventana.class.getName()).log(Level.SEVERE, null, ex);
+        if(this.tDni.getText().trim().length()>0){
+            if (JOptionPane.showConfirmDialog(this, "¿Estas seguro?") == JOptionPane.OK_OPTION) {
+                try {
+                    controlador.eliminarEmpleado();
+                    limpiarCampos();
+                } catch (dniExepcion ex) {
+                    Logger.getLogger(Ventana.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                this.actualizarTabla();
             }
-            this.actualizarTabla();
         }
     }//GEN-LAST:event_btnborrarActionPerformed
 
