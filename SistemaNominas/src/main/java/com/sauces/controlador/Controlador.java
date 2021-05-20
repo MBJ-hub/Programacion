@@ -120,11 +120,13 @@ public class Controlador {
         dni = vista.getDni();
         emp = modelo.getEmpleado(dni);
         if (emp != null) {
-            modelo.eliminarEmpleado(emp);
-            vista.mostrarMensaje("Empleadao eliminado ");
+            if(modelo.eliminarEmpleado(emp)){;
+                vista.mostrarMensaje("Empleadao eliminado ");
+            }else {
+                vista.mostrarMensaje("no ha podido eliminar el empleado");
+            }
         } else {
-            vista.mostrarMensaje("no ha podido eliminar el empleado");
-
+            vista.mostrarMensaje("no hay un empleado");
         }
     }
 
