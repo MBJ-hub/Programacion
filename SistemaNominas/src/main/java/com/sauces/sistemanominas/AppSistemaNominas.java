@@ -3,19 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.suaces.sistemanominas;
+package com.sauces.sistemanominas;
 
-import com.suaces.modelo.EmpleadoObj;
-import com.suaces.modelo.dniExepcion;
-import com.suaces.modelo.EmpleadoEventual;
-import com.suaces.sistemanominas.dao.EmpleadoDao;
-import com.suaces.modelo.SistemaNominas;
-import com.suaces.modelo.EmpleadoCsv;
-import com.suaces.modelo.EmpleadoFijo;
-import com.suaces.modelo.Empleado;
-import com.suaces.modelo.EmpleadoXml;
-import com.suaces.sistemanominas.dao.DaoException;
-import com.suaces.modelo.EmpleadoJson;
+import com.sauces.modelo.EmpleadoObj;
+import com.sauces.modelo.dniExepcion;
+import com.sauces.modelo.EmpleadoEventual;
+import com.sauces.sistemanominas.dao.EmpleadoDao;
+import com.sauces.modelo.SistemaNominas;
+import com.sauces.modelo.EmpleadoCsv;
+import com.sauces.modelo.EmpleadoFijo;
+import com.sauces.modelo.Empleado;
+import com.sauces.modelo.EmpleadoXml;
+import com.sauces.sistemanominas.dao.DaoException;
+import com.sauces.modelo.EmpleadoJson;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
