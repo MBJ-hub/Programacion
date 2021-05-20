@@ -165,22 +165,18 @@ public class Controlador {
         List<Empleado> listado = null;
         String orden = vista.getOrden();
         switch (orden) {
-            case "DNI":
-                listado = modelo.listarEmpleados();
+            case "DNI": listado = modelo.listarEmpleados();
                 break;
-            case "Ingresos":
-                listado = modelo.ListarEmpleadosPorSueldo();
+            case "Ingresos": listado = modelo.ListarEmpleadosPorSueldo();
                 break;
-            case "nombre":
-                listado = modelo.listarEmpleados();
-                Collections.sort(listado, new Comparator<Empleado>() {
+            case "nombre": listado = modelo.listarEmpleados();
+                    Collections.sort(listado, new Comparator<Empleado>() {
                     @Override
                     public int compare(Empleado e1, Empleado e2) {
                         return e1.getNombre().compareTo(e2.getNombre());
                     }
                 });
                 break;
-
         }
     }
 
@@ -195,9 +191,9 @@ public class Controlador {
         if (empleadoDao != null) {
             try {
                 modelo.setEmpleadoDao(empleadoDao);
-               n=  modelo.guardarEmpleados();
+                n=  modelo.guardarEmpleados();
                
-                 vista.mostrarMensaje("se ha guardado "+n+" Empleados");
+                vista.mostrarMensaje("se ha guardado "+n+" Empleados");
                 vista.listarEmpleados(modelo.listarEmpleados());
             } catch (DaoException ex) {
                 vista.mostrarMensaje(ex.getMessage());
