@@ -380,15 +380,16 @@ public class Ventana extends javax.swing.JFrame {
             controlador.guardarEmpleados();
         }
     }//GEN-LAST:event_guardarActionPerformed
-    /*  public void tablechange()() {
+    /*  Incompleto
+        public void tablechange()() {
         int fila = TablaEmpleados.getSelectedRow();
-        if (fila >= 0) {
-            tdni.setText((String) TablaEmpleados.getValueAt(fila, 0));
-            tnombre.setText((String) TablaEmpleados.getValueAt(fila, 1));
-            tsalario.setText(TablaEmpleados.getValueAt(fila, 2).toString());
+            if (fila >= 0) {
+                tdni.setText((String) TablaEmpleados.getValueAt(fila, 0));
+                tnombre.setText((String) TablaEmpleados.getValueAt(fila, 1));
+                tsalario.setText(TablaEmpleados.getValueAt(fila, 2).toString());
+            }
         }
-    }
-}*/
+    }*/
     public void actualizarTabla() {
         this.TablaEmpleados.revalidate();
     }
@@ -411,7 +412,7 @@ public class Ventana extends javax.swing.JFrame {
 
     public float getSalario() {
         return Float.parseFloat(this.tsalario.getText());
-        //*return (Number) this.tSalario.getValue()
+        //* Incompleto  return (Number) this.tSalario.getValue()
     }
 
     public float getIngresos() {
@@ -428,7 +429,7 @@ public class Ventana extends javax.swing.JFrame {
     }
 
     public String getOrden() {
-        //*return bgOrden.getSelection().getActionCommand();
+        //*Incompleto  return bgOrden.getSelection().getActionCommand();
         this.rddni.getText();
         this.rdnombre.getText();
         this.rdingresos.getText();
@@ -437,7 +438,6 @@ public class Ventana extends javax.swing.JFrame {
     }
 
     public void mostrarTipo(String tipo) {
-
         this.ttipo.setSelectedItem(tipo);
     }
 
@@ -465,6 +465,20 @@ public class Ventana extends javax.swing.JFrame {
     public void listarEmpleados(List<Empleado> listado) {
         EpleadoTM.setListado(listado);
         actualizarTabla();
+        /** Incompleto.
+            tbEmpleados.getSelectionModel().addListSelectionListener(new...)
+                public void valueChanged(ListSelectionEvent e){}
+                private void seleccionadoEmpleado(ListSeleccionEvent e){
+                int fila=tbEmpleados.getSelectedRow();
+                    if(fila>=0){
+                        mostrarDni(...);
+                        mostrarNombre(...);
+                        mostrarSalario(...);
+                        mostrarHoras(...);
+                        mostrarIngresos(...);
+                    }
+                }
+        */
     }
 
     public void mostrarMensaje(String mensaje) {
