@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.suaces.vista;
+package com.sauces.vista;
 
-import com.suaces.controlador.Controlador;
-import com.suaces.modelo.Empleado;
-import com.suaces.modelo.dniExepcion;
+import com.sauces.controlador.Controlador;
+import com.sauces.modelo.Empleado;
+import com.sauces.modelo.dniExepcion;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
