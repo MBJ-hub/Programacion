@@ -20,7 +20,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>com.suaces.sistemanominas</mainClass>
+                            <mainClass>com.sauces.sistemanominas</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
