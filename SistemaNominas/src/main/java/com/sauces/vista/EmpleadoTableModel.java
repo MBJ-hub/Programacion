@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.suaces.vista;
+package com.sauces.vista;
 
-import com.suaces.modelo.Empleado;
-import com.suaces.modelo.EmpleadoEventual;
-import com.suaces.modelo.EmpleadoFijo;
+import com.sauces.modelo.Empleado;
+import com.sauces.modelo.EmpleadoEventual;
+import com.sauces.modelo.EmpleadoFijo;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
