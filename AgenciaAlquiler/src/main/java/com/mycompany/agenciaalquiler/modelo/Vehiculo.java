@@ -25,6 +25,15 @@ public abstract class Vehiculo {
     public Grupo getGrupo() {
         return grupo;
     }
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
+    }
+
+    public void setGrupo(Grupo grupo) {
+        this.grupo = grupo;
+    }
+    
     
     @Override
     public String toString() {

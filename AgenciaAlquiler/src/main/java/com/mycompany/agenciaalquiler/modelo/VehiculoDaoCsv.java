@@ -24,6 +24,10 @@ public class VehiculoDaoCsv implements VehiculoDao {
         this.path = path;
     }
 
+    public VehiculoDaoCsv(String archivo) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public Path getPath() {
         return path;
     }

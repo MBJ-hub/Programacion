@@ -13,6 +13,16 @@ public class Turismo extends Vehiculo {
         this.plazas= plazas;
     }
 
+    public int getPlazas() {
+        return plazas;
+    }
+
+    public void setPlazas(int plazas) {
+        this.plazas = plazas;
+    }
+    
+    
+
     @Override
     public String toString() {
         return super.toString()+ "," +  plazas;

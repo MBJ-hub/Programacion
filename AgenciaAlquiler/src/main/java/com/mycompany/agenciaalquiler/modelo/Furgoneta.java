@@ -13,6 +13,15 @@ public class Furgoneta extends Vehiculo{
         this.capacidad= capacidad;
     }
 
+    public float getCapacidad() {
+        return capacidad;
+    }
+
+    public void setCapacidad(float capacidad) {
+        this.capacidad = capacidad;
+    }
+
+    
     @Override
     public String toString() {
         return super.toString()+ "," +capacidad;

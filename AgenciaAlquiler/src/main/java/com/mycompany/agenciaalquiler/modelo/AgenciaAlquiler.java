@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
-import com.mycompany.agenciaalquiler.modelo.VehiculoDao;
 
 /**
  *
@@ -14,12 +13,47 @@ public class AgenciaAlquiler {
 
     private String nombre;
     private List<Vehiculo> flota;
+    private VehiculoDao vehiculoDao;
 
-    public AgenciaAlquiler(String nombre, List<Vehiculo> flota) {
+    /**
+     *
+     * @param flota
+     * @param nombre
+     */
+    public AgenciaAlquiler(List<Vehiculo> flota, String nombre) {
         this.nombre = nombre;
+        this.flota = flota;
+        
+    }
+
+    public AgenciaAlquiler() {
+        flota=new ArrayList<>();
+    }
+
+    public VehiculoDao getVehiculoDao(){
+        return vehiculoDao;
+    }
+
+    public List<Vehiculo> getFlota() {
+        return flota;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setFlota(List<Vehiculo> flota) {
         this.flota = flota;
     }
 
+    public void setVehiculoDao(VehiculoDao vehiculoDao) {
+        this.vehiculoDao = vehiculoDao;
+    }
+    
+    public void setVehiculos(List<Vehiculo> vehiculos){
+        this.flota = vehiculos; 
+    }
+    
     public boolean incluirVehiculo(Vehiculo vehiculo) {
         boolean incluido = false;
         if (!flota.contains(vehiculo)) {
@@ -29,7 +63,7 @@ public class AgenciaAlquiler {
         return incluido;
     }
 
-    public Vehiculo consultarVehiculo(Matricula matricula) {
+    public Vehiculo consultarVehiculo(String matricula) {
         Vehiculo v = null;
         Iterator<Vehiculo> iterador = flota.iterator();
         while (iterador.hasNext()) {
@@ -58,12 +92,18 @@ public class AgenciaAlquiler {
     public List<Vehiculo> listarVehiculos(Grupo grupo) {
         List<Vehiculo> listadoG = new ArrayList<>();
 
-        for (Vehiculo v : flota) {
-            if (grupo.equals(v.getGrupo())) {
-                listadoG.add(v);
-            }
-        }
+        flota.stream().filter(v -> (grupo.equals(v.getGrupo()))).forEachOrdered(v -> {
+            listadoG.add(v);
+        });
         return listadoG;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public List<Vehiculo> getVehiculos() {
+        return flota;
     }
 
     public Vehiculo getVehiculoMasBarato() {
@@ -71,12 +111,24 @@ public class AgenciaAlquiler {
         return Collections.min(flota, new ComparadorPrecioAlquiler());
     }
     
-    public int guardarVehiculos(){
-        return 0;
+    public int guardarVehiculos() throws DaoException{
+        int n=0;
+        if(vehiculoDao!=null){
+            return vehiculoDao.insertar(flota);
+        }
+        return n;
     }
     
     public int cargarVehiculos(){
-        return 0;
+        int n=0;
+        if(vehiculoDao!=null){
+            List<Vehiculo> listado=vehiculoDao.listar();
+            n = listado.stream().map(v -> {
+                if(this.incluirVehiculo(v));
+                return v;
+            }).map(_item -> 1).reduce(n, Integer::sum);
+        }
+         return n;
     }
     
 }

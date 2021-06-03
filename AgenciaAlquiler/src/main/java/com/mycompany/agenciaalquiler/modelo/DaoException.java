@@ -9,7 +9,7 @@ package com.mycompany.agenciaalquiler.modelo;
  *
  * @author daw1
  */
-class DaoException extends Exception {
+public class DaoException extends Exception {
     public DaoException(String message) {
     super (message);
     }

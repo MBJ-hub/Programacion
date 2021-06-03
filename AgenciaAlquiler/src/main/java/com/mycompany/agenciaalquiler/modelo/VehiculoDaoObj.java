@@ -5,10 +5,15 @@
  */
 package com.mycompany.agenciaalquiler.modelo;
 
+import java.io.EOFException;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -21,14 +26,9 @@ public class VehiculoDaoObj implements VehiculoDao {
     public VehiculoDaoObj(Path path) {
         this.path = path;
     }
-    
-    
-    @Override
-    public List<Vehiculo> listar() {
-        
-        
-        
-        return null;
+
+    public VehiculoDaoObj(String archivo) {
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
@@ -44,5 +44,27 @@ public class VehiculoDaoObj implements VehiculoDao {
      }
         return n; 
     }
+       
+    @Override
+        public List<Vehiculo> listar() {
+        List<Vehiculo> lista = new ArrayList<>();
+        Vehiculo vehiculo;
+        try(InputStream inputS=Files.newInputStream(path);
+                ObjectInputStream entrada = new ObjectInputStream(inputS);){
+            while(inputS.available() > 0){
+                vehiculo=(Vehiculo)entrada.readObject();
+                lista.add(vehiculo);
+            }
+        }catch(EOFException eofe){
+            System.out.println("Fin de fichero");
+        }catch(ClassNotFoundException cnfe){
+            System.out.println("Objeto no esperado");
+        }catch(FileNotFoundException fnfe){
+            System.out.println("No existe el fichero");
+        }catch(IOException ioe){
+            System.out.println("Error de entrada/salida");
+        }  
+        return lista;    
+        }
     
 }

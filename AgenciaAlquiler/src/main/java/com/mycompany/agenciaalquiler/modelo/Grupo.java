@@ -21,6 +21,18 @@ public enum Grupo {
         this.factorFurgoneta = factorFurgoneta;
     }
 
+    public float getPrecioBase() {
+        return precioBase;
+    }
+
+    public float getFactorTurismo() {
+        return factorTurismo;
+    }
+
+    public float getFactorFurgoneta() {
+        return factorFurgoneta;
+    }
+
     public static Grupo getA() {
         return A;
     }
